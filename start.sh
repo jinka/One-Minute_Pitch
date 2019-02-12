@@ -1,3 +1,3 @@
-SECRET_KEY = '<Flask WTF Secret Key>'
+SECRET_KEY = 'jinkoos'
 
 python3.6 manage.py server
