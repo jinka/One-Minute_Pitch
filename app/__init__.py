@@ -6,7 +6,6 @@ from flask_login import LoginManager
 from flask_uploads import UploadSet,configure_uploads,IMAGES
 
 photos = UploadSet('photos',IMAGES)
-def create_app(config_name):
 
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
