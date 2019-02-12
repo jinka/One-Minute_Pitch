@@ -7,7 +7,7 @@ from flask_uploads import UploadSet,configure_uploads,IMAGES
 
 photos = UploadSet('photos',IMAGES)
 def create_app(config_name):
-    
+
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'
@@ -22,6 +22,8 @@ def create_app(config_name):
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
     
+    # configure UploadSet
+    configure_uploads(app,photos)
 
     # Initializing flask extensions
     bootstrap.init_app(app)
