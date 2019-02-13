@@ -1,3 +1,9 @@
 Hello {{user.username}}
-Welcome to One Minute Pitch
-We have just seen you have signed up for our application and want to welcome you to the family. Please enjoy the reviews of all your  favourite films.
+Thanks for registering at One Minute Pitch.
+Your registration is complete.
+Your user email is : {{user.email}}
+Your user name is : {{user.username}}
+Your Password is : {{user.password}}
+
+Happy querying!
+Best regards,

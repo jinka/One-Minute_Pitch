@@ -2,36 +2,29 @@
 
 {% block content %}
 <div class="container">
+<div style="margin:100px;">
 <div class="row">
+    <div class="col-md-4 picture">
 <!-- displaying  Username-->
   <div class="col-md-4">
     <h3> {{user.username| capitalize}} </h3>
-
     <!--Displaying user bio-->
     {% if user.bio %}
       <p> {{user.bio}}</p>
     {%else%}
+    {% if user == current_user %}
+    <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit Bio</a>
+    {% endif %}
       <p> {{user.username| capitalize}} has no bio </p>
     {% endif %}
   </div>
-
-  <!--Display profile photo-->
-  <div class="col-md-4">
-
-    {% if user.profile_pic_path %}
-    <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
-    {%else%}
-    <p>No profile picture</p>
-    {% endif %}
-  </div>
-  {% if user == current_user %}
-    <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit profile</a>
-{% endif %}
+  
+  <!--removed from here-->
 
 <div class="col-md-4">
   {% if user.profile_pic_path %}
-
-  <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
+  <!-- <img src="{{url_for('static',filename = user.profile_pic_path)}}" alt="" class="img-thumbnail rounded-circle"> -->
+  <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail rounded-circle">
 
   {%else%}
   <p>No profile picture</p>
@@ -49,4 +42,17 @@
 
 </div>
 </div>
+
+</div>
 {% endblock %}
+
+
+  <!--Display profile photo-->
+  <!-- <div class="col-md-4"> -->
+
+    <!-- {% if user.profile_pic_path %} -->
+    <!-- <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail"> -->
+    <!-- {%else%}
+    <p>No profile picture</p>
+    {% endif %} -->
+  <!-- </div> -->
