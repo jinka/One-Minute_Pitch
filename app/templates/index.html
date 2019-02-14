@@ -1,46 +1,96 @@
-{% extends 'base.html' %}
+    {% extends 'base.html' %}
 
-{% import 'macros.html' as macro %}
-{%block styles%}
-    {{ super() }}
-    <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet"
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Upright" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-{%endblock%}
+    {% import 'macros.html' as macro %}
+    {%block styles%}
+        {{ super() }}
+        <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Upright" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-{%block content%}
-<div class="jumbotron text-center" style="background-color: #A55462; color: #fff; padding: 100px 25px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;">
-    <h1><marquee>Welcome to Pitches</marquee></h1>
-    <h3><marquee direction = "right">Register, Create Picth, Pitch, Bio, Vote </marquee></h3>
-   </div>
-<div class="container" style="padding-bottom: 20px;">
-    <!-- <a href="{{url_for('main.new_pitch')}}" class="btn btn-success">Create pitch</a> -->
-</div>
+    {%endblock%}
 
-<div class="container" style= "font-family: 'Cormorant Upright', serif;">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="well well-lg">
-                <h3>Interview Pitches</h3>
-                <p>Want to ace an interview in just a few words, welcome.</p>
-                <a href="{{url_for('main.interview_pitches')}}" class="btn btn-primary -center">View</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="well well-lg">
-                <h3>Product Pitches</h3>
-                <p>Want to talk about your products, you're in the right place.</p>
-                <a href="{{url_for('main.product_pitches')}}" class="btn btn-primary -center">View</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="well well-lg">
-                <h3>Promotion Pitches</h3>
-                <p>Want to promote anything, step right up and begin.</p>
-                <a href="{{url_for('main.promotion_pitches')}}" class="btn btn-primary -center">View</a>
-            </div>
-        </div>
+    {%block content%}
+    <div class="jumbotron text-center" style="background-color: #A55462; color: #fff; padding: 100px 25px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, cursive;">
+        </marquee>
+            <marquee direction = "up">
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: darkgreen; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:darkmagenta; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:darkorchid; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:darkslategray; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:dimgray;font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:firebrick; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:honeydew; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:inherit; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:lightcyan; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:lightpink; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:lime; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: darkgreen; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: darkgreen; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+        </marquee>
+        <h1><marquee>Welcome to Pitches</marquee></h1>
+        <marquee direction = "down">
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: darkgreen; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: darkgreen; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: darkgreen; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: darkgreen; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: darkgreen; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color:blue; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+                <i class="fa fa-spinner w3-spin" style="color: burlywood; font-size:64px"></i>
+        </marquee>   
+        <!-- <h3><marquee direction = "right">Register, Create Picth, Pitch, Bio, Vote </marquee></h3> -->
     </div>
-</div>
-{%endblock%}
+    <div class="container" style="padding-bottom: 20px;">
+        <!-- <a href="{{url_for('main.new_pitch')}}" class="btn btn-success">Create pitch</a> -->
+    </div>
+
+    <div class="container" style= "font-family: 'Cormorant Upright', serif;">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="well well-lg">
+                    <h3>Interview Pitches</h3>
+                    <p>Please say something about Interview, , welcome to One Time Pitch!!.</p>
+                    <a href="{{url_for('main.interview_pitches')}}" class="btn btn-primary -center">Display To Read, Vote and Leave Comment</a>
+                </div>         
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="well well-lg">
+                    <h3>Product Pitches</h3>
+                    <p>Please say something about your products, welcome to One Time Pitch!!.</p>
+                    <a href="{{url_for('main.product_pitches')}}" class="btn btn-primary -center">Display To Read, Vote and Leave Comment</a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                    <div class="well well-lg">
+                        <h3>Promotion Pitches</h3>
+                        <p>You can promote now, welcome to One Time Pitch!!</p>
+                        <a href="{{url_for('main.promotion_pitches')}}" class="btn btn-primary -center">Display To Read, Vote and Leave Comment</a>
+                    </div>
+                </div>
+            </div>
+    </div>
+    {%endblock%}
