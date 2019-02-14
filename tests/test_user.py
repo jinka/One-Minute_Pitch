@@ -1,5 +1,5 @@
 import unittest
-from app.models import User, Role
+from  app.models import User
 
 class UserModelTest(unittest.TestCase):
 
@@ -14,3 +14,6 @@ class UserModelTest(unittest.TestCase):
 
     def test_password_verification(self):
         self.assertTrue(self.new_user.verify_password('banana'))
+
+if __name__ == '__main__':
+    unittest.run
