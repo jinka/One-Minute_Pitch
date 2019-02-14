@@ -3,7 +3,6 @@ Thanks for registering at One Minute Pitch.
 Your registration is complete.
 Your user email is : {{user.email}}
 Your user name is : {{user.username}}
-Your Password is : {{user.password}}
 
 Happy querying!
 Best regards,
